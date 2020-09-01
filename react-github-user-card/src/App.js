@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 
+import Cards from './Components/Cards';
+import Card from './Components/Card';
+
 class App extends React.Component {
   constructor() {
     super()
@@ -32,8 +35,9 @@ class App extends React.Component {
   render() {
     return(
       <div>
-        Waddup!
-        {this.state.account.bio}
+        <h1>React Github User-Cards w/ Class Components</h1>
+        <Card user={this.state.account}/>
+        <Cards users={this.state.followers}/>
       </div>
     )
   }
